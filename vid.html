@@ -1,54 +1,44 @@
-<body>
-  <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+<!DOCTYPE html> 
+<html> 
+<body> 
 
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Large</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="mov_bbb.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video>
+</div> 
 
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+<script> 
+var myVideo = document.getElementById("video1"); 
 
-.navbar a:hover {
-  background: #f1f1f1;
-  color: black;
-}
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
 
-.navbar a.active {
-  background-color: #04AA6D;
-  color: white;
-}
+function makeBig() { 
+    myVideo.width = 560; 
+} 
 
-.main {
-  padding: 16px;
-  margin-bottom: 30px;
-}
-</style>
-</head>
-<body>
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
 
-<div class="navbar">
-  <a href="/" class="active">Home</a>
-  <a href="/vid.html">Video</a>
-</div>
-  <center>
-    <h1>Student Lighthouse</h1>
-    <p>video</p>
-      </center>
-  <iframe src="https://player.vimeo.com/video/690599012?h=5de33f341f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="900" height="506" frameborder="1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen;"></iframe>
-<h2>   Student Lighthouse "Towel Rap"</h2>
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
+
+
+</body> 
+</html>
 </body>
