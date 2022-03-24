@@ -40,6 +40,10 @@ body {
   padding: 16px;
   margin-bottom: 30px;
 }
+ .h2 {
+  padding: 26px;
+  margin-bottom: 30px;
+}
 </style>
 </head>
 <body> 
@@ -53,7 +57,7 @@ function sConsole() {
  System.setOut(printStream);
 //sConsole(); This would call it only on script load, which isn't what you want
 </script>
- <h1>INPORTANT ENTER YOUR NAME</h1>
+ <h2>INPORTANT ENTER YOUR NAME</h2>
  <form action="" onsubmit="event.preventDefault(); sConsole();"> <!-- use inline JS to print input to console on submit -->
 <input type="text" name="data" id="data">
 <button type="submit">Submit</button>
