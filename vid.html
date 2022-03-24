@@ -43,6 +43,21 @@ body {
 </style>
 </head>
 <body> 
+ <h1>INPORTANT ENTER YOUR NAME</h1>
+ <form action="" onsubmit="event.preventDefault(); sConsole();"> <!-- use inline JS to print input to console on submit -->
+<input type="text" name="data" id="data">
+<button type="submit">Submit</button>
+</form>
+
+<script>
+function sConsole() {
+  var data = document.getElementById("data");
+  console.log(data.value); // data is the element, and we want its value
+}
+ PrintStream printStream = new PrintStream(new FileOutputStream(file));
+ System.setOut(printStream);
+//sConsole(); This would call it only on script load, which isn't what you want
+</script>
  <h1>Student Lighthouse Team</h1>
 <h3>Please click PlayPause to start</h3>
 <div style="text-align:center"> 
